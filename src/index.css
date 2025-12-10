@@ -85,12 +85,22 @@ h1, h2, h3, .display-4 {
     font-size: 10rem;
     line-height: 0.8;
     text-transform: uppercase;
-    background: linear-gradient(to bottom, #fff 0%, #ccc 100%);
+    background: linear-gradient(to bottom, #d991f3 0%, #94e1f6 33%, #d991f3 66%, #94e1f6 100%);
+    background-size: 100% 300%; /* Buffer for seamless shift */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0;
+    animation: gradientMove 8s linear infinite; /* Smooth, infinite loop */
 }
 
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
 @media (max-width: 768px) {
     .hero-title {
         font-size: 6rem;
@@ -182,6 +192,11 @@ aside {
     padding: 2rem;
     z-index: 1000;
 }
+.full-menu a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
 .menu-list {
     list-style: none;
@@ -199,9 +214,8 @@ aside {
     transition: color 0.3s, text-decoration 0.3s;
 }
 
-.menu-item:hover {
-    color: #ccc;
-    text-decoration: none;
+.menu-item:hover a{
+
 }
 
 .close-btn {
@@ -228,8 +242,8 @@ aside {
 /* Custom Cursor */
 .custom-cursor {
     position: fixed;
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     background-color: #fff;
     border-radius: 50%;
     pointer-events: none;
@@ -239,5 +253,5 @@ aside {
 }
 
 .custom-cursor.hover {
-    transform: scale(1.5);
+    transform: scale(2);
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const Sidebar = () => {
     return (
         <aside className="bg-light p-4 border rounded">
-            <h4 className="fw-bold text-center mb-3">Kategorie</h4>
+            <h4 className="fw-bold text-center mb-3 text-dark">Kategorie</h4>
             <ul className="list-group list-group-flush">
                 <li className="list-group-item">Historie</li>
                 <li className="list-group-item">Modely</li>

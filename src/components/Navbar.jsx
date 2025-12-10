@@ -55,10 +55,6 @@ const Navbar = () => {
                         <p>© 2025 | Privacy Policy | Cookies</p>
                         <p>Address: Example St, City | hello@rx7blog.com</p>
                     </div>
-                    {/* Optional video thumbnail */}
-                    <div style={{ position: 'absolute', bottom: '1rem', right: '2rem' }}>
-                        <img src="https://via.placeholder.com/200x100?text=Video" alt="Video Thumbnail" />
-                    </div>
                 </motion.div>
             )}
         </nav>

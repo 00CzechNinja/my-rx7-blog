@@ -50,7 +50,7 @@ function App() {
         };
 
         const handleMouseOver = (e) => {
-            if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+            if (e.target.closest('a, button, input, select, [role="button"], .clickable')) {
                 setIsHovering(true);
             } else {
                 setIsHovering(false);
